@@ -131,3 +131,9 @@ dmypy.json
 
 # application database
 .db
+
+# custom extensions and files
+app.db
+config.py
+initialise.sh
+test_send_mail.py

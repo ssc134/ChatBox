@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action="" method="POST" novalidate>
+
+  <h1>Please Sign Up</h1>
+  {{ form.hidden_tag() }}
+  <br>
+  {{ form.email(placeholder="email", for="inputEmail", autofocus="true", size=40) }}
+  <br>
+  {{ form.username(placeholder="Username", for="inputUsername", autofocus="true", size=40) }}
+  <br>
+  {{ form.password1(placeholder="Password", for="inputPassword", autofocus="true", size=40) }}
+  <br>
+  {{ form.password2(placeholder="Password", for="inputPassword", autofocus="true", size=40) }}
+  <br>
+  {{ form.submit(class="w-100 btn btn-lg btn-primary") }}
+
+</form>
+<br>
+<p> <a href="{{ url_for('index') }}">Home</a> </p>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<body>
+
+  <form action="" method="POST" novalidate>
+
+    <h1>Please sign in</h1>
+
+    {{ form.hidden_tag() }}
+
+    {{ form.username(placeholder="Username", for="inputEmail", autofocus="true", size=40) }}
+    <br>
+    {{ form.password(placeholder="Password", for="inputPassword", autofocus="true", size=40) }}
+    <br>
+    {{ form.remember_me( value="remember-me") }} {{ form.remember_me.label }}
+    <br>
+    {{ form.submit(class="w-100 btn btn-lg btn-primary") }}
+  </form>
+
+  <p> <a href="{{ url_for('request_password_reset') }}">Reset password?</a> </p>
+  <br>
+  <p> <a href="{{ url_for('index') }}">Home</a> </p>
+</body>
+
+{% endblock %}

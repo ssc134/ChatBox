@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<body>
+
+  <!-- Custom styles for this template -->
+  <link href="static/styles/index.css" rel="stylesheet">
+
+  <a href="">Contact</a> <br>
+
+  <a href="">Donate</a> <br>
+
+  {% if not current_user.is_authenticated %}
+  <a href="{{ url_for('login') }}">Sign In</a> <br>
+
+  <a href="{{ url_for('register') }}">Sign Up</a> <br>
+
+  {% else %}
+  <a href="{{ url_for('logout') }}">Log Out</a> <br>
+  {% endif %}
+
+  
+</body>
+
+{% endblock %}

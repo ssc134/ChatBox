@@ -1,6 +1,10 @@
 flask
 WTForms
+flask-wtf
 Flask-SQLAlchemy
 flask-login
 flask-migrate
 python-dotenv
+email_validator
+flask-mail
+PyJWT
